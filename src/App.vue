@@ -26,7 +26,7 @@ const mostrarResultado = ref(false)
       <div>
         <p>
           E-mail:
-          <input type="email" v-model="email"  placeholder="example@example" />
+          <input type="email" v-model="email" placeholder="example@example" />
         </p>
         <p>
           Senha:
@@ -80,27 +80,27 @@ const mostrarResultado = ref(false)
       <div class="hobbies">
         <label for="hobbies">Hobbies favoritos: </label>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="esportes" />
+          <input type="checkbox" v-model="hobbies" value="Esportes" />
           <p>Esportes</p>
         </div>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="ler" />
+          <input type="checkbox" v-model="hobbies" value="Ler" />
           <p>Ler</p>
         </div>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="musica" />
+          <input type="checkbox" v-model="hobbies" value="Música" />
           <p>Ouvir música</p>
         </div>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="videogames" />
+          <input type="checkbox" v-model="hobbies" value="Videogames" />
           <p>Jogar Videogames</p>
         </div>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="assistir" />
+          <input type="checkbox" v-model="hobbies" value="Assistir" />
           <p>Assistir TV/Série</p>
         </div>
         <div class="sla">
-          <input type="checkbox" v-model="hobbies" value="redes" />
+          <input type="checkbox" v-model="hobbies" value="Redes" />
           <p>Usar redes sociais</p>
         </div>
       </div>
@@ -113,21 +113,20 @@ const mostrarResultado = ref(false)
       <div>
         <button type="submit">Mostrar</button>
       </div>
-      
     </form>
     <div v-if="mostrarResultado" class="resultado">
-        <h2>Resultado</h2>
-        <p>Nome: {{ nome }}</p>
-        <p>Email: {{ email }}</p>
-        <p>Senha: {{ senha }}</p>
-        <p>Nascimento: {{ nascimento }}</p>
-        <p>Endereço: {{ endereço }}</p>
-        <p>Cidade: {{ cidade }}</p>
-        <p>Estado: {{ estado }}</p>
-        <p>Hobbies: {{ hobbies }}</p>
-        <p>Biografia: {{ bio }}</p>
-        <p>{{ mostrarResultado }}</p>
-      </div>
+      <h2>Resultado</h2>
+      <p>Nome: {{ nome }}</p>
+      <p>Email: {{ email }}</p>
+      <p>Senha: {{ senha }}</p>
+      <p>Nascimento: {{ nascimento }}</p>
+      <p>Endereço: {{ endereço }}</p>
+      <p>Cidade: {{ cidade }}</p>
+      <p>Estado: {{ estado }}</p>
+      <p>Hobbies: {{ hobbies.join(', ') }}</p>
+      <p>Biografia: {{ bio }}</p>
+      <p>{{ mostrarResultado }}</p>
+    </div>
   </div>
 </template>
 <style scoped>
