@@ -131,12 +131,13 @@ const mostrarResultado = ref(false)
 </template>
 <style scoped>
 form {
-  background-color: black;
+  background-color: rgb(187, 163, 202);
   color: white;
   display: flex;
   box-sizing: border-box;
   padding: 30px;
   width: 100vw;
+  border-radius: 15px;
 }
 
 form > * {
@@ -154,5 +155,8 @@ div {
 .sla {
   display: flex;
   gap: 10px;
+}
+input {
+  border-radius: 6px;
 }
 </style>
